@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/RhyanXG7/SC/BetterStar/SCDOORS/original_paste.lua')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/RhyanXG7/SC/BetterStar/SCDOORS/Orion.lua')))()
 local Window = OrionLib:MakeWindow({IntroText = "RHSEEKER V1.0.0",Name = "Doors", HidePremium = true, SaveConfig = true, ConfigFolder = "DoorsSex"})
 if game.PlaceId == 6516141723 then
     OrionLib:MakeNotification({
