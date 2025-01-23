@@ -185,6 +185,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health = -1000
 		print("Entity has killed the player")
 	else
+    game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health = -1000
 		print("Entity has damaged the player")
          game.workspace.Ripper.RushNew.Anchored = false
          game.workspace.Ripper.RushNew.CanCollide = true
