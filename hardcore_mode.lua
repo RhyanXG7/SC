@@ -68,6 +68,7 @@ local function msg(message)
 end
 
 if game.ReplicatedStorage.GameData.LatestRoom.Value > 1 then 
+	game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health = -1000
 	game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Error"
 	firesignal(game.ReplicatedStorage.RemoteEvents.DeathHint.OnClientEvent, {"You need to execute the script at door 0!", "Remember this!"}, "Blue")
 	game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)  
@@ -591,7 +592,7 @@ end)()
 coroutine.wrap(function()
 while true do 
 wait(math.random(23, 370))
-loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/hdisgvshceaseeee"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RhyanXG7/SC/refs/heads/BetterStar/cease.lua"))()
 end
 end)()
 
