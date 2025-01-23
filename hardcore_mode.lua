@@ -432,7 +432,7 @@ msg(SillyBillies1[math.random(1,#SillyBillies1)])
 --Ripper
 coroutine.wrap(function()
 while true do wait(108)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/hshsbsbshripper"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RhyanXG7/SC/refs/heads/BetterStar/Ripper.lua"))()
 end
 end)()
 
