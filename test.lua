@@ -346,31 +346,6 @@ function HttpSpyAPI:DetectNewcclosure()
     end
 end
 
-function HttpSpyAPI:DetectEnvironmentTamper()
-    if not self.Config.ProtectionActive then
-        self:HandleTampering()
-        return
-    end
-    
-    local env = getgenv and getgenv() or _G
-    
-    if env.getrawmetatable or env.setrawmetatable then
-        self:HandleDetection("Raw metatable access detected", "EnvironmentTamper")
-    end
-    
-    if env.getloadedmodules or env.getcallingscript then
-        self:HandleDetection("Script enumeration detected", "EnvironmentTamper")
-    end
-    
-    if env.getgc or env.getinstances or env.getnilinstances then
-        self:HandleDetection("Garbage collector access detected", "EnvironmentTamper")
-    end
-    
-    if env.getconnections or env.getcustomasset then
-        self:HandleDetection("Connection manipulation detected", "EnvironmentTamper")
-    end
-end
-
 function HttpSpyAPI:ProtectEnvironment()
     local env = getgenv and getgenv() or _G
     
