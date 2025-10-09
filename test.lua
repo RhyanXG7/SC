@@ -568,7 +568,6 @@ function HttpSpyAPI:StartProtection()
     self:DetectMetatableHooks()
     self:DetectHookfunction()
     self:DetectNewcclosure()
-    self:DetectEnvironmentTamper()
     
     task.wait(1)
     
