@@ -59,7 +59,6 @@ function HttpSpyAPI.new(config)
         "Hookfunction",
         "Newcclosure",
         "Newproxy",
-        "EnvironmentTamper",
         "MemoryManipulation"
     }
     
