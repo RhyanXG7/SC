@@ -57,7 +57,6 @@ function HttpSpyAPI.new(config)
         "SetMetatable",
         "GetMetatable",
         "Hookfunction",
-        "Newcclosure",
         "Newproxy",
         "MemoryManipulation"
     }
@@ -333,17 +332,6 @@ function HttpSpyAPI:DetectHookfunction()
     end
 end
 
-function HttpSpyAPI:DetectNewcclosure()
-    local env = getgenv and getgenv() or _G
-    
-    if env.newcclosure or env.newlclosure then
-        self:HandleDetection("Closure creation API detected", "Newcclosure")
-    end
-    
-    if env.clonefunction or env.cloneref then
-        self:HandleDetection("Function cloning detected", "Newcclosure")
-    end
-end
 
 function HttpSpyAPI:ProtectEnvironment()
     local env = getgenv and getgenv() or _G
@@ -566,7 +554,6 @@ function HttpSpyAPI:StartProtection()
     self:DetectHttpExtraction()
     self:DetectMetatableHooks()
     self:DetectHookfunction()
-    self:DetectNewcclosure()
     
     task.wait(1)
     
